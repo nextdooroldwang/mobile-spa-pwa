@@ -73,7 +73,6 @@ export default defineConfig({
     require('tailwindcss')({
       config: './tailwind.config.js',
     }),
-    // require('postcss-nested'),
   ],
   ignoreMomentLocale: true,
   ...spaConfig,
