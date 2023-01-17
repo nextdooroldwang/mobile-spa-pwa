@@ -8,3 +8,6 @@ declare module '*.svg' {
   const url: string;
   export default url;
 }
+type PureValue = any;
+type PureObject = Record<string, PureValue>;
+type PureArray = PureObject[];

@@ -1,0 +1,25 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      nodejs: 16
+    commands:
+      - echo "=========INSTALL==========="
+      - npm update -g yarn
+      - yarn
+
+  build:
+    commands:
+      - echo "=========BUILD==========="
+      - yarn build:"${ENV}"
+
+  post_build:
+    commands:
+      - echo "=========POST BUILD==========="
+      - aws s3 sync ./dist  s3://$DEPLOY_BUCKET_NAME
+      - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
+
+artifacts:
+  files:
+    - '**/*'
+  base-directory: ./dist

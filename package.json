@@ -2,9 +2,11 @@
   "private": true,
   "scripts": {
     "start": "umi dev",
-    "build": "umi build",
+    "build:dev": "UMI_ENV=dev umi build",
+    "build": "UMI_ENV=prod umi build",
     "test": "umi-test",
     "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src ",
+    "fix:less": "stylelint \"./src/**/*.less\" --fix",
     "prettier": "prettier --write '**/*.{js,jsx,tsx,ts,less,md,json}'",
     "test:coverage": "umi-test --coverage"
   },
@@ -58,5 +60,9 @@
     "tailwindcss": "^3.2.4",
     "typescript": "^4.1.2",
     "yorkie": "^2.0.0"
-  }
+  },
+  "engines": {
+    "node": "16.x"
+  },
+  "engineStrict": true
 }

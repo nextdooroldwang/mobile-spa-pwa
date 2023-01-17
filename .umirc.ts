@@ -75,5 +75,6 @@ export default defineConfig({
     }),
     // require('postcss-nested'),
   ],
+  ignoreMomentLocale: true,
   ...spaConfig,
 });
