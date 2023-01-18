@@ -11,3 +11,8 @@ declare module '*.svg' {
 type PureValue = any;
 type PureObject = Record<string, PureValue>;
 type PureArray = PureObject[];
+
+interface Window {
+  FIREBASE_APPCHECK_DEBUG_TOKEN: boolean | string | undefined;
+}
+declare var window: Window & typeof globalThis;
