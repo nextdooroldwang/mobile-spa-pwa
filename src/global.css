@@ -1,6 +1,6 @@
 @import 'tailwind.css';
 
-@supports (font: -apple-system-body) and (-webkit-appearance: none) {
+/* @supports (font: -apple-system-body) and (-webkit-appearance: none) {
   img[loading='lazy'] {
     clip-path: inset(0.6px);
   }
@@ -28,4 +28,4 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-}
+} */
