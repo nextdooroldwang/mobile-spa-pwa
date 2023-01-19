@@ -1,4 +1,5 @@
 import AutoAwesomeIcon from '@mui/icons-material/AutoAwesome';
+import { styled } from '@mui/material';
 import Tab from '@mui/material/Tab';
 import Tabs from '@mui/material/Tabs';
 import * as React from 'react';
@@ -10,23 +11,28 @@ export default function IconTabs() {
     setValue(newValue);
   };
 
+  const FlexStartTab = styled(Tab)(() => ({
+    '&.MuiTab-root': { justifyContent: 'flex-start' },
+  }));
+
   return (
     <Tabs
       value={value}
       onChange={handleChange}
       aria-label="icon position tabs example"
+      TabIndicatorProps={{ sx: { backgroundColor: 'transparent' } }}
     >
-      <Tab
+      <FlexStartTab
         icon={value === 0 ? <AutoAwesomeIcon /> : undefined}
         label="bottom"
         iconPosition="bottom"
       />
-      <Tab
+      <FlexStartTab
         icon={value === 1 ? <AutoAwesomeIcon /> : undefined}
         iconPosition="bottom"
         label="start"
       />
-      <Tab
+      <FlexStartTab
         icon={value === 2 ? <AutoAwesomeIcon /> : undefined}
         iconPosition="bottom"
         label="end"

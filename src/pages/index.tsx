@@ -9,6 +9,7 @@ import CircularIntegration from '@/components/common/mui/progress';
 import HorizontalLabelPositionBelowStepper from '@/components/common/mui/step';
 import { Android12Switch } from '@/components/common/mui/switch';
 import IconTabs from '@/components/common/mui/top-tabs';
+import { HorizontalSwiper } from '@/components/common/swiper/horizontal-swiper';
 import { SaveAltOutlined } from '@mui/icons-material';
 import LoadingButton from '@mui/lab/LoadingButton';
 import { Typography } from '@mui/material';
@@ -24,7 +25,10 @@ export default function IndexPage() {
   return (
     <div>
       <IconTabs />
-      <span className="text-3xl font-bold text-[#fb923c]">tailwind</span>
+      <div className="aspect-video">
+        <HorizontalSwiper />
+      </div>
+
       <LoadingButton
         aria-label="to user"
         variant="outlined"
@@ -34,6 +38,7 @@ export default function IndexPage() {
       >
         <Link to="/user">csr to user</Link>
       </LoadingButton>
+      <Link to="/live">csr to live</Link>
       <AccountMenu />
       <BootstrapInput
         defaultValue="react-bootstrap"

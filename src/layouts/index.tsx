@@ -19,7 +19,9 @@ IRouteComponentProps) {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container maxWidth="md">{children}</Container>
+      <Container maxWidth="md" sx={{ p: 0 }}>
+        {children}
+      </Container>
       <FixedBottomNavigation />
     </ThemeProvider>
   );
