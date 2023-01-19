@@ -68,7 +68,6 @@ export default defineConfig({
   },
   fastRefresh: {},
   mock: false,
-  // mfsu: {},
   extraPostCSSPlugins: [
     require('postcss-import'),
     require('tailwindcss')({

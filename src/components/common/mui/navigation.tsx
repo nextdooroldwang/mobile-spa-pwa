@@ -1,3 +1,4 @@
+import theme from '@/utils/mui/theme';
 import ArchiveIcon from '@mui/icons-material/Archive';
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import RestoreIcon from '@mui/icons-material/Restore';
@@ -11,7 +12,13 @@ export default function FixedBottomNavigation() {
 
   return (
     <Paper
-      sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}
+      sx={{
+        position: 'fixed',
+        bottom: 0,
+        left: 0,
+        right: 0,
+        zIndex: theme.zIndex.snackbar,
+      }}
       elevation={3}
     >
       <BottomNavigation
