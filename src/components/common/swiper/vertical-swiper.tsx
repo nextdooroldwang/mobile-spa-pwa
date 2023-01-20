@@ -1,6 +1,6 @@
 import { A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import './index.less';
 export const VerticalSwiper = () => {
   return (
     <Swiper

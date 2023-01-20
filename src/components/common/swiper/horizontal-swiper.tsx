@@ -1,5 +1,6 @@
 import { A11y, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import './index.less';
 
 export const HorizontalSwiper = () => {
   return (

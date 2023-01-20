@@ -1,17 +1,33 @@
 import AppBar from '@/components/common/mui/app-bar';
 import { PageView } from '@/components/common/swiper/page-view';
+import ContentWrapperOnNavigation from '@/components/common/wrapper/content-wrapper-on-navigation';
 import HomeIndexComponent from '@/components/home';
 import LiveComponent from '@/components/home/live';
+
 export default function HomePage() {
   return (
-    <div className="h-screen w-screen">
+    <>
       <AppBar />
       <PageView
         slides={[
-          { key: 'index', node: <HomeIndexComponent /> },
-          { key: 'live', node: <LiveComponent /> },
+          {
+            key: 'index',
+            node: (
+              <ContentWrapperOnNavigation>
+                <HomeIndexComponent />
+              </ContentWrapperOnNavigation>
+            ),
+          },
+          {
+            key: 'live',
+            node: (
+              <ContentWrapperOnNavigation>
+                <LiveComponent />
+              </ContentWrapperOnNavigation>
+            ),
+          },
         ]}
       />
-    </div>
+    </>
   );
 }

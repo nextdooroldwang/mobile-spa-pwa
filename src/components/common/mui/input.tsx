@@ -1,9 +1,11 @@
 import InputBase from '@mui/material/InputBase';
-import { OutlinedInputProps } from '@mui/material/OutlinedInput';
+import type { OutlinedInputProps } from '@mui/material/OutlinedInput';
 import { alpha, styled } from '@mui/material/styles';
 
-import TextField, { TextFieldProps } from '@mui/material/TextField';
-import React, { RefCallback } from 'react';
+import type { TextFieldProps } from '@mui/material/TextField';
+import TextField from '@mui/material/TextField';
+import type { RefCallback } from 'react';
+import React from 'react';
 import { IMaskInput } from 'react-imask';
 import { NumericFormat } from 'react-number-format';
 

@@ -68,12 +68,6 @@ export default defineConfig({
   },
   fastRefresh: {},
   mock: false,
-  extraPostCSSPlugins: [
-    require('postcss-import'),
-    require('tailwindcss')({
-      config: './tailwind.config.js',
-    }),
-  ],
   ignoreMomentLocale: true,
   ...spaConfig,
 });

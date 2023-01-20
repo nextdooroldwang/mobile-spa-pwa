@@ -20,16 +20,16 @@ import { useState } from 'react';
 import { Link } from 'umi';
 import { HorizontalSwiper } from '../common/swiper/horizontal-swiper';
 
+import './index.less';
+
 export default function HomeIndexComponent() {
   const [value, setValue] = useState('1');
   return (
-    <div>
-      <div style={{ aspectRatio: '16 / 9' }}>
+    <>
+      <div className="aspect-video">
         <HorizontalSwiper />
       </div>
-      <div className="text-3xl font-bold text-[#fb923c]">
-        <Link to="/user">csr to user</Link>
-      </div>
+      <Link to="/user">csr to user</Link>
       <LoadingButton
         aria-label="to user"
         variant="outlined"
@@ -78,11 +78,7 @@ export default function HomeIndexComponent() {
 
       <Android12Switch />
 
-      <Avatar
-        alt="Remy Sharp"
-        src="/static/images/avatar/1.jpg"
-        className="w-44"
-      />
+      <Avatar alt="Remy Sharp" src="/static/images/avatar/1.jpg" />
       <CircularIntegration />
       <Grid container spacing={3} disableEqualOverflow>
         <Grid xs={12}>
@@ -98,6 +94,6 @@ export default function HomeIndexComponent() {
         </Grid>
       </Grid>
       <HorizontalLabelPositionBelowStepper />
-    </div>
+    </>
   );
 }

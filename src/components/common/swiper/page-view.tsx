@@ -1,7 +1,7 @@
 import React from 'react';
 import { A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-
+import './index.less';
 interface SlideModel {
   key: string;
   node: React.ReactNode;

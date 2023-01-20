@@ -1,3 +1,5 @@
+export const bottomNavigationHeight = 56;
+
 export const reservedKeys = {
   token: 'TOKEN',
   fmc: 'FMC_TOKEN',
